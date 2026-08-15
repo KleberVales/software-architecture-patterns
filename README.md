@@ -70,6 +70,12 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 
 - However, unit-testing the Business layer can be difficult because it directly instantiates or imports persistence classes, often forcing you to use integration tests or complex database mocks.
 
+**Changeability:**
+
+- Changing the UI or adding new API endpoints is easy because the lower layers are unaffected.
+
+- Swapping out the database, framework, or persistence mechanism is difficult because the core business rules directly depend on the Data Access layer.
+
 
 ## 2. Hexagonal Architecture
 
