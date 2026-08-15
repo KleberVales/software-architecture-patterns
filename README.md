@@ -1,6 +1,6 @@
 # Software Architecture Patterns
 
-## Layered
+## Layered Architecture
 
 ## Hexagonal
 
