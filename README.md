@@ -64,6 +64,12 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 
 - Layered architecture groups code by technical responsibility (e.g., placing all Controllers in one package and all Services in another) rather than by functional feature. As a system grows, a single UserService accumulates hundreds of unrelated methods, lowering domain cohesion.
 
+**Testability:**
+
+- Testing the Presentation layer in isolation is relatively straightforward.
+
+- However, unit-testing the Business layer can be difficult because it directly instantiates or imports persistence classes, often forcing you to use integration tests or complex database mocks.
+
 
 ## 2. Hexagonal Architecture
 
