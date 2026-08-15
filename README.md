@@ -54,6 +54,12 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 
 ### 1.4 Where Layered Architecture Has Trade-Offs
 
+**Coupling:**
+
+- Within adjacent layers: Coupling is structured and predictable.
+
+- Across the system: Because dependencies point downward toward the database, the Business layer becomes tightly coupled to concrete persistence models. Changing a database schema often causes a cascading change upward through the services and controllers.
+
 
 ## 2. Hexagonal Architecture
 
