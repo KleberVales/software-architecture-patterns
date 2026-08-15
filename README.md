@@ -60,6 +60,10 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 
 - Across the system: Because dependencies point downward toward the database, the Business layer becomes tightly coupled to concrete persistence models. Changing a database schema often causes a cascading change upward through the services and controllers.
 
+**Cohesion:**
+
+- Layered architecture groups code by technical responsibility (e.g., placing all Controllers in one package and all Services in another) rather than by functional feature. As a system grows, a single UserService accumulates hundreds of unrelated methods, lowering domain cohesion.
+
 
 ## 2. Hexagonal Architecture
 
