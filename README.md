@@ -48,6 +48,7 @@ While Layered Architecture is great for getting simple applications off the grou
 
 **Separation of Concerns:** This is the primary driver of Layered Architecture. It organizes code into distinct horizontal tiers based on technical responsibilities:
 
+$$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longrightarrow \text{Persistence (Database)}$$
 
 
 ## 2. Hexagonal Architecture
