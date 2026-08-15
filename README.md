@@ -1,6 +1,6 @@
 # Software Architecture Patterns
 
-## Introduction
+## 1. Introduction
 
 A good architecture tries to control:
 
