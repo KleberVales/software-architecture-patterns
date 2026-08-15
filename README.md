@@ -63,6 +63,23 @@ Hexagonal Architecture achieves isolation using three main concepts:
 
    - Driven Adapters: Database repositories (Spring Data JPA, JDBC), REST clients, AWS S3 adapters.
 
+### 2.2 Main Strengths (Why Use It?)
+
+- Framework & Infrastructure Independence: You can swap databases (e.g., PostgreSQL to DynamoDB) or messaging tools (Kafka to RabbitMQ) without touching a single line of core business logic.
+
+- Blazing-Fast Unit Testing: Because the core application has no database or HTTP dependencies, you can unit-test 100% of your business rules using pure in-memory mocks without booting up Spring containers or Testcontainers.
+
+- Multiple Delivery Mechanisms: A single core use case can easily be triggered by a REST API, a background cron job, a gRPC call, or a CLI tool just by plugging in new Driving Adapters.
+
+### 2.3 Weaknesses & Trade-Offs
+
+While Hexagonal Architecture solves structural coupling, it introduces non-trivial friction that makes it unsuitable for every project:
+
+- Significant Indirection & Class Explosion
+- High Mapping Overhead (Boilerplate)
+- Steep Learning Curve & Team Friction
+- Over-Engineering Simple Domains
+
 
 ## Clean Architecture
 
