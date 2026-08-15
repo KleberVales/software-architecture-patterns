@@ -35,7 +35,7 @@ While Layered Architecture is great for getting simple applications off the grou
 
 
 
-## Hexagonal Architecture
+## 2. Hexagonal Architecture
 
 The purpose of Hexagonal Architecture (also known as the Ports and Adapters pattern, introduced by Alistair Cockburn) is to isolate core business logic from external dependencies, frameworks, delivery mechanisms, and databases.
 
@@ -43,6 +43,25 @@ In a traditional setup, database models and HTTP frameworks leak into your busin
 
 
 <img width="799" height="582" alt="Screenshot from 2026-08-14 22-17-39" src="https://github.com/user-attachments/assets/24014732-5b1e-43d6-9973-e3e1376590ac" />
+Driving (Primary) vs Driven (Secondary) Ports and Adapters. Source: @hgraca
+
+### 2.1 The Core Purpose & Key Mechanisms
+
+Hexagonal Architecture achieves isolation using three main concepts:
+
+- The Application Core (The Inside): Pure domain logic and use cases written in plain language features (POJOs / pure classes). It contains zero framework annotations (e.g., no JPA/Hibernate tags, no Spring Web dependencies).
+
+- Ports (The Interfaces): Entry and exit points defined by the core:
+
+   - Driving Ports (Inbound): Define how the outside world calls the core (e.g., OrderUseCase interface).
+
+   - Driven Ports (Outbound): Define what the core needs from the outside world (e.g., SaveOrderPort interface).
+
+- Adapters (The Outside Implementation): Concrete code translating between the outside world and the Ports:
+
+   - Driving Adapters: REST Controllers, CLI commands, Kafka message listeners.
+
+   - Driven Adapters: Database repositories (Spring Data JPA, JDBC), REST clients, AWS S3 adapters.
 
 
 ## Clean Architecture
