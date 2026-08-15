@@ -46,6 +46,8 @@ While Layered Architecture is great for getting simple applications off the grou
 
 ### 1.3 Where Layered Architecture Excels
 
+**Separation of Concerns:** This is the primary driver of Layered Architecture. It organizes code into distinct horizontal tiers based on technical responsibilities:
+
 
 
 ## 2. Hexagonal Architecture
