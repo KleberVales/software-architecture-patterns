@@ -29,13 +29,13 @@ It divides an application horizontally into distinct layers, where each layer ha
 └─────────────────────────────────────────┘
 ```
 
-### 1.1 The core principles driving this architecture are:
+### 2.1 The core principles driving this architecture are:
 
 - Isolation of Roles: Developers can modify UI components without breaking database logic, or rewrite SQL queries without affecting business rules.
 - Standardized Control Flow: Request execution flows strictly top-to-bottom ($Presentation \rightarrow Business \rightarrow Data$). A lower layer never knows about or calls an upper layer.
 - Simplicity and Familiarity: It is intuitive to set up and aligns naturally with most web frameworks out of the box.
  
-### 1.2 Major Weaknesses of Layered Architecture
+### 2.2 Major Weaknesses of Layered Architecture
 
 While Layered Architecture is great for getting simple applications off the ground, it reveals several critical flaws as system complexity scales:
 
@@ -44,7 +44,7 @@ While Layered Architecture is great for getting simple applications off the grou
 - Testing Friction (Slow, Integrated Unit Tests)
 - Monolithic Bloat ("Big Ball of Mud" Risk)
 
-### 1.3 Where Layered Architecture Excels
+### 2.3 Where Layered Architecture Excels
 
 **Separation of Concerns:** This is the primary driver of Layered Architecture. It organizes code into distinct horizontal tiers based on technical responsibilities:
 
@@ -52,7 +52,7 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 
 **Dependency Direction:** It strictly enforces a top-down dependency rule. An upper layer can only depend on the layer directly below it ($Presentation \rightarrow Business \rightarrow Persistence$). A lower layer never knows about or depends on an upper layer.
 
-### 1.4 Where Layered Architecture Has Trade-Offs
+### 2.4 Where Layered Architecture Has Trade-Offs
 
 **Coupling:**
 
@@ -77,7 +77,7 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 - Swapping out the database, framework, or persistence mechanism is difficult because the core business rules directly depend on the Data Access layer.
 
 
-## 2. Hexagonal Architecture
+## 3. Hexagonal Architecture
 
 The purpose of Hexagonal Architecture (also known as the Ports and Adapters pattern, introduced by Alistair Cockburn) is to isolate core business logic from external dependencies, frameworks, delivery mechanisms, and databases.
 
@@ -87,7 +87,7 @@ In a traditional setup, database models and HTTP frameworks leak into your busin
 <img width="799" height="582" alt="Screenshot from 2026-08-14 22-17-39" src="https://github.com/user-attachments/assets/24014732-5b1e-43d6-9973-e3e1376590ac" />
 Driving (Primary) vs Driven (Secondary) Ports and Adapters. Source: @hgraca
 
-### 2.1 The Core Purpose & Key Mechanisms
+### 3.1 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
 
@@ -105,7 +105,7 @@ Hexagonal Architecture achieves isolation using three main concepts:
 
    - Driven Adapters: Database repositories (Spring Data JPA, JDBC), REST clients, AWS S3 adapters.
 
-### 2.2 Main Strengths (Why Use It?)
+### 3.2 Main Strengths (Why Use It?)
 
 - Framework & Infrastructure Independence: You can swap databases (e.g., PostgreSQL to DynamoDB) or messaging tools (Kafka to RabbitMQ) without touching a single line of core business logic.
 
@@ -113,7 +113,7 @@ Hexagonal Architecture achieves isolation using three main concepts:
 
 - Multiple Delivery Mechanisms: A single core use case can easily be triggered by a REST API, a background cron job, a gRPC call, or a CLI tool just by plugging in new Driving Adapters.
 
-### 2.3 Weaknesses & Trade-Offs
+### 3.3 Weaknesses & Trade-Offs
 
 While Hexagonal Architecture solves structural coupling, it introduces non-trivial friction that makes it unsuitable for every project:
 
@@ -123,9 +123,11 @@ While Hexagonal Architecture solves structural coupling, it introduces non-trivi
 - Over-Engineering Simple Domains
 
 
-## Clean Architecture
+## 4. Clean Architecture
 
-## Onion Architecture
+## 5. Onion Architecture
+
+
 
 
 
