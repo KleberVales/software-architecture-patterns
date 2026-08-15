@@ -11,7 +11,7 @@ Changeability — how easy it is to change DB, framework, API, etc.\
 Testability — how easy it is to test business logic\
 Separation of concerns — keeping different responsibilities apart
 
-## 1. Layered Architecture
+## 2. Layered Architecture
 
 It divides an application horizontally into distinct layers, where each layer has a specialized role and only communicates with adjacent layers.
 
