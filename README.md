@@ -2,8 +2,8 @@
 
 ## Layered Architecture
 
-## Hexagonal
+## Hexagonal Architecture
 
-## Clean
+## Clean Architecture
 
-## Onion
+## Onion Architecture
