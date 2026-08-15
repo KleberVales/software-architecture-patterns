@@ -52,6 +52,8 @@ $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longr
 
 **Dependency Direction:** It strictly enforces a top-down dependency rule. An upper layer can only depend on the layer directly below it ($Presentation \rightarrow Business \rightarrow Persistence$). A lower layer never knows about or depends on an upper layer.
 
+### 1.4 Where Layered Architecture Has Trade-Offs
+
 
 ## 2. Hexagonal Architecture
 
