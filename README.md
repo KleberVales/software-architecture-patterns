@@ -1,5 +1,16 @@
 # Software Architecture Patterns
 
+## Introduction
+
+A good architecture tries to control:
+
+Coupling — how much one part depends on another\
+Cohesion — how well the responsibilities of a component fit together\
+Dependency direction — who is allowed to depend on whom\
+Changeability — how easy it is to change DB, framework, API, etc.\
+Testability — how easy it is to test business logic\
+Separation of concerns — keeping different responsibilities apart
+
 ## 1. Layered Architecture
 
 It divides an application horizontally into distinct layers, where each layer has a specialized role and only communicates with adjacent layers.
@@ -85,12 +96,5 @@ While Hexagonal Architecture solves structural coupling, it introduces non-trivi
 
 ## Onion Architecture
 
-A good architecture tries to control:
 
-Coupling — how much one part depends on another\
-Cohesion — how well the responsibilities of a component fit together\
-Dependency direction — who is allowed to depend on whom\
-Changeability — how easy it is to change DB, framework, API, etc.\
-Testability — how easy it is to test business logic\
-Separation of concerns — keeping different responsibilities apart
 
