@@ -50,6 +50,8 @@ While Layered Architecture is great for getting simple applications off the grou
 
 $$\text{Presentation (UI/API)} \longrightarrow \text{Business (Services)} \longrightarrow \text{Persistence (Database)}$$
 
+**Dependency Direction:** It strictly enforces a top-down dependency rule. An upper layer can only depend on the layer directly below it ($Presentation \rightarrow Business \rightarrow Persistence$). A lower layer never knows about or depends on an upper layer.
+
 
 ## 2. Hexagonal Architecture
 
