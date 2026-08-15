@@ -40,3 +40,13 @@ While Layered Architecture is great for getting simple applications off the grou
 ## Clean Architecture
 
 ## Onion Architecture
+
+A good architecture tries to control:
+
+Coupling — how much one part depends on another\
+Cohesion — how well the responsibilities of a component fit together\
+Dependency direction — who is allowed to depend on whom\
+Changeability — how easy it is to change DB, framework, API, etc.\
+Testability — how easy it is to test business logic\
+Separation of concerns — keeping different responsibilities apart
+
