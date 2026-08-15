@@ -37,6 +37,14 @@ While Layered Architecture is great for getting simple applications off the grou
 
 ## Hexagonal Architecture
 
+The purpose of Hexagonal Architecture (also known as the Ports and Adapters pattern, introduced by Alistair Cockburn) is to isolate core business logic from external dependencies, frameworks, delivery mechanisms, and databases.
+
+In a traditional setup, database models and HTTP frameworks leak into your business rules. Hexagonal Architecture flips this on its head by turning the core application into a self-contained engine that doesn't care how it's triggered (via REST, CLI, Kafka, or tests) or where it stores data (PostgreSQL, MongoDB, or in-memory).
+
+
+<img width="799" height="582" alt="Screenshot from 2026-08-14 22-17-39" src="https://github.com/user-attachments/assets/24014732-5b1e-43d6-9973-e3e1376590ac" />
+
+
 ## Clean Architecture
 
 ## Onion Architecture
