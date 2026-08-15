@@ -44,6 +44,8 @@ While Layered Architecture is great for getting simple applications off the grou
 - Testing Friction (Slow, Integrated Unit Tests)
 - Monolithic Bloat ("Big Ball of Mud" Risk)
 
+### 1.3 Where Layered Architecture Excels
+
 
 
 ## 2. Hexagonal Architecture
