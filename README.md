@@ -31,9 +31,10 @@ It divides an application horizontally into distinct layers, where each layer ha
 
 ### 2.1 The core principles driving this architecture are:
 
+- Simplicity and Familiarity: It is intuitive to set up and aligns naturally with most web frameworks out of the box.
 - Isolation of Roles: Developers can modify UI components without breaking database logic, or rewrite SQL queries without affecting business rules.
 - Standardized Control Flow: Request execution flows strictly top-to-bottom ($Presentation \rightarrow Business \rightarrow Data$). A lower layer never knows about or calls an upper layer.
-- Simplicity and Familiarity: It is intuitive to set up and aligns naturally with most web frameworks out of the box.
+
  
 ### 2.2 Major Weaknesses of Layered Architecture
 
