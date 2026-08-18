@@ -110,6 +110,8 @@ The domain has zero compile-time dependency on infrastructure libraries. You cou
 
 ### 3.2 Where Layered Architecture Has Trade-Offs
 
+**Changeability**
+
 ### 3.2 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
