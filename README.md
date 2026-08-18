@@ -102,6 +102,8 @@ This is the one criterion where hexagonal architecture isn't just "helpful" — 
 
 Because the domain/use-case layer has no dependency on frameworks, databases, or HTTP, you can unit test business logic with plain objects and fakes — no Spring context, no embedded database, no HTTP mocking. Tests run fast and test only business rules, not "did Spring wire things correctly."
 
+**Separation of Concerns**
+
 ### 3.1 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
