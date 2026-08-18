@@ -122,7 +122,7 @@ The classic sales pitch is "swap your database without touching business logic."
 
 Within a single adapter or the domain layer, cohesion is good. But hexagonal architecture organizes code around technical seams (ports/adapters), not necessarily around business capability. Without pairing it with something like DDD bounded contexts, a single business feature can end up fragmented across a use-case class, a port interface, a mapper, and an adapter — four files to understand "one thing." That's a cohesion cost, not a benefit, if applied uniformly to simple features.
 
-### 3.2 The Core Purpose & Key Mechanisms
+### 3.3 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
 
@@ -141,7 +141,7 @@ Hexagonal Architecture achieves isolation using three main concepts:
    - Driven Adapters: Database repositories (Spring Data JPA, JDBC), REST clients, AWS S3 adapters.
 
 
-### 3.3 Main Strengths (Why Use It?)
+### 3.4 Main Strengths (Why Use It?)
 
 - Framework & Infrastructure Independence: You can swap databases (e.g., PostgreSQL to DynamoDB) or messaging tools (Kafka to RabbitMQ) without touching a single line of core business logic.
 
@@ -149,7 +149,7 @@ Hexagonal Architecture achieves isolation using three main concepts:
 
 - Multiple Delivery Mechanisms: A single core use case can easily be triggered by a REST API, a background cron job, a gRPC call, or a CLI tool just by plugging in new Driving Adapters.
 
-### 3.4 Weaknesses & Trade-Offs
+### 3.5 Weaknesses & Trade-Offs
 
 While Hexagonal Architecture solves structural coupling, it introduces non-trivial friction that makes it unsuitable for every project:
 
