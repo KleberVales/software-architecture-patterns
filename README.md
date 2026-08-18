@@ -108,6 +108,8 @@ It cleanly separates what the system does (domain, use cases) from how it's deli
 
 The domain has zero compile-time dependency on infrastructure libraries. You could delete every adapter and the domain module would still compile. That's about as decoupled as it gets between business logic and delivery/persistence mechanisms.
 
+### 3.2 Where Layered Architecture Has Trade-Offs
+
 ### 3.2 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
