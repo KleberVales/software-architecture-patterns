@@ -88,6 +88,8 @@ In a traditional setup, database models and HTTP frameworks leak into your busin
 <img width="799" height="582" alt="Screenshot from 2026-08-14 22-17-39" src="https://github.com/user-attachments/assets/24014732-5b1e-43d6-9973-e3e1376590ac" />
 Driving (Primary) vs Driven (Secondary) Ports and Adapters. Source: @hgraca
 
+### 3.1 Where Layered Architecture Excels
+
 ### 3.1 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
