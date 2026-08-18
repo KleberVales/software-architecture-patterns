@@ -112,6 +112,12 @@ The domain has zero compile-time dependency on infrastructure libraries. You cou
 
 **Changeability**
 
+The classic sales pitch is "swap your database without touching business logic." In reality:
+
+- Teams rarely actually swap databases in a live system — the theoretical flexibility is often paid for upfront but never cashed in.
+- Port abstractions designed to be storage-agnostic often become a lowest-common-denominator interface, preventing you from using DB-specific features (window functions, JSONB queries, full-text search) without leaking them back into the "port," which partially defeats the abstraction.
+- Framework upgrades (e.g., Spring major version bumps) are genuinely easier to isolate — that part of "changeability" holds up. It's the "swap the database" narrative specifically that's weaker than advertised.
+
 ### 3.2 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
