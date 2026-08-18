@@ -90,6 +90,12 @@ Driving (Primary) vs Driven (Secondary) Ports and Adapters. Source: @hgraca
 
 ### 3.1 Where Layered Architecture Excels
 
+**Dependency Direction**
+
+This is the entire reason hexagonal architecture exists. It enforces the Dependency Inversion Principle rigorously: all dependencies point inward toward the domain. Infrastructure (DB, web framework, messaging) depends on interfaces (ports) that the domain defines — never the other way around. A repository implementation depends on a UserRepository port interface owned by the domain; the domain never imports JPA, Spring, or anything infrastructure-related.
+
+This is the one criterion where hexagonal architecture isn't just "helpful" — it's architecturally defined by getting this right.
+
 ### 3.1 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
