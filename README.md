@@ -96,6 +96,8 @@ This is the entire reason hexagonal architecture exists. It enforces the Depende
 
 This is the one criterion where hexagonal architecture isn't just "helpful" — it's architecturally defined by getting this right.
 
+**Testability**
+
 ### 3.1 The Core Purpose & Key Mechanisms
 
 Hexagonal Architecture achieves isolation using three main concepts:
