@@ -90,8 +90,6 @@ Driving (Primary) vs Driven (Secondary) Ports and Adapters. Source: @hgraca
 
 ### 3.1 Where Layered Architecture Excels
 
-
-
 **Dependency Direction**
 
 This is the entire reason hexagonal architecture exists. It enforces the Dependency Inversion Principle rigorously: all dependencies point inward toward the domain. Infrastructure (DB, web framework, messaging) depends on interfaces (ports) that the domain defines — never the other way around. A repository implementation depends on a UserRepository port interface owned by the domain; the domain never imports JPA, Spring, or anything infrastructure-related.
@@ -103,6 +101,8 @@ This is the one criterion where hexagonal architecture isn't just "helpful" — 
 Because the domain/use-case layer has no dependency on frameworks, databases, or HTTP, you can unit test business logic with plain objects and fakes — no Spring context, no embedded database, no HTTP mocking. Tests run fast and test only business rules, not "did Spring wire things correctly."
 
 **Separation of Concerns**
+
+It cleanly separates what the system does (domain, use cases) from how it's delivered/persisted (REST controllers, JPA, message queues). Swapping "how you're called" (REST vs. gRPC vs. CLI) or "how you persist" doesn't touch business rules.
 
 ### 3.1 The Core Purpose & Key Mechanisms
 
