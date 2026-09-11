@@ -193,6 +193,12 @@ Organize code in concentric layers, with dependencies only pointing inward. Oute
 - Interface Adapters — Convert data between the format use cases need and the format external tools need. Controllers, presenters, gateways live here.
 - Frameworks & Drivers — The outermost layer: web frameworks, databases, UI, external APIs. This is where the "details" live — things you want to be able to swap without touching business logic.
 
+**The Dependency Rule**
+
+This is the crucial rule: source code dependencies must point only inward. Nothing in an inner layer should know anything about an outer layer. A use case shouldn't know if data comes from PostgreSQL or MongoDB; it just talks to an abstraction (interface), and an outer-layer adapter implements that interface.
+
+This is achieved via dependency inversion — inner layers define interfaces, outer layers implement them.
+
 ## 5. Onion Architecture
 
 
