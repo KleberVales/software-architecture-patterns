@@ -165,6 +165,8 @@ Clean Architecture is a software design philosophy popularized by Robert C. Mart
 
 ### The core idea
 
+Organize code in concentric layers, with dependencies only pointing inward. Outer layers can depend on inner layers, but inner layers know nothing about outer ones.
+
 ## 5. Onion Architecture
 
 
