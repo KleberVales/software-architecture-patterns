@@ -199,6 +199,13 @@ This is the crucial rule: source code dependencies must point only inward. Nothi
 
 This is achieved via dependency inversion — inner layers define interfaces, outer layers implement them.
 
+**Why bother**
+
+- Testability — Business logic can be tested without a database, UI, or web server.
+- Independence from frameworks — Swap Express for Fastify, or MySQL for DynamoDB, without rewriting business rules.
+- Independence from UI — The same use cases can back a web app, CLI, or mobile app.
+- Long-term maintainability — Business rules aren't tangled with delivery mechanisms that change often.
+
 ## 5. Onion Architecture
 
 
