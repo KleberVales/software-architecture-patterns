@@ -186,6 +186,13 @@ Organize code in concentric layers, with dependencies only pointing inward. Oute
 └─────────────────────────────────────┘
 ```
 
+**The layers**
+
+- Entities — Core business objects and rules. These represent the most general, high-level logic and rarely change (e.g., a Loan or Order object with its inherent rules).
+- Use Cases — Application-specific business logic. These orchestrate the flow of data to and from entities, implementing what the system does (e.g., "TransferMoney," "RegisterUser").
+- Interface Adapters — Convert data between the format use cases need and the format external tools need. Controllers, presenters, gateways live here.
+- Frameworks & Drivers — The outermost layer: web frameworks, databases, UI, external APIs. This is where the "details" live — things you want to be able to swap without touching business logic.
+
 ## 5. Onion Architecture
 
 
