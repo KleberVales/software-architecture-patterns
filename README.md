@@ -161,6 +161,8 @@ While Hexagonal Architecture solves structural coupling, it introduces non-trivi
 
 ## 4. Clean Architecture
 
+Clean Architecture is a software design philosophy popularized by Robert C. Martin ("Uncle Bob"). Its core goal: keep your business logic independent from frameworks, databases, UI, and external tools, so the system stays flexible, testable, and easy to change.
+
 ## 5. Onion Architecture
 
 
